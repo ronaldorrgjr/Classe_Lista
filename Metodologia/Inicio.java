@@ -13,7 +13,7 @@ public class Inicio {
 		System.out.println("\tadd+ para adicionar um produto na escolha de posição");
 		System.out.println("\tremove para remover o ultimo item da lista");
 		System.out.println("\tremove+ para remover item na lista na escolha de posição");
-		System.out.println("\ttotal calcular o valor total da lista");
+		System.out.println("\ttotal calcular o tamanho da lista");
 		System.out.println();
 	}
 	
@@ -75,6 +75,8 @@ public class Inicio {
 				System.out.println("Nome: ");
 				String nome = read.nextLine().trim();
 				l.buscarPos(l.contatos, nome);
+			}else if (line.equals("total")){
+				System.out.println(l.getTamanho());
 			}
 			
 		}

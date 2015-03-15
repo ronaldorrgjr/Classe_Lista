@@ -8,7 +8,7 @@ public class Inicio {
 		System.out.println("Menu:");
 		System.out.println("\texit para sair");
 		System.out.println("\tlist para imprimir a lista");
-		System.out.println("\tfind para buscar um produto");
+		System.out.println("\tfind para buscar a posição da contato na lista");
 		System.out.println("\tadd para adicionar um item na lista");
 		System.out.println("\tadd+ para adicionar um produto na escolha de posição");
 		System.out.println("\tremove para remover o ultimo item da lista");
@@ -71,6 +71,10 @@ public class Inicio {
 				System.out.println("Qual a posição na lista que deseja remover: ");
 				int pos = read.nextInt();read.nextLine().trim();
 				l.remover(pos);
+			}else if (line.equals("find")){
+				System.out.println("Nome: ");
+				String nome = read.nextLine().trim();
+				l.buscarPos(l.contatos, nome);
 			}
 			
 		}

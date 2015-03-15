@@ -41,7 +41,7 @@ public class Lista {
 	
 	private void deslocarEsquerda(int pos){
 		for (int i = pos; i < n-1; i++) {
-			contatos[i+1] = contatos[i];
+			contatos[i] = contatos[i+1];
 		}
 	}
 	
@@ -98,8 +98,20 @@ public class Lista {
 	
 	public void listar(Contato[] contato){		
 		for (int i = 0; i < n; i++) {
-			System.out.println(toString());
+			Contato c = contato[i];
+			System.out.println(c.toString());
 		}
+	}
+	
+	public void buscarPos(Contato[] contato, String nome){
+		int cont = 0;
+		for (int i = 0; i < n; i++) {			
+			if (contato[i].getNome().equalsIgnoreCase(nome)){
+				System.out.println("Posição:"+cont);
+				System.out.println(contato[i]);
+			}
+			cont++;
+		}		
 	}
 	
 }
